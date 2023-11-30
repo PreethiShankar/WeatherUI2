@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/RelativeLayoutId1"
+
+    tools:context=".MainActivity">
+
+    <com.example.weatherui.HalfCircularProgressBar
+        android:id="@+id/halfCircularProgressBar"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/profileTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:gravity="right"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_gravity="end"
+            android:layout_height="20dp"
+            android:src="@drawable/baseline_more_vert_18" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="82dp"
+        android:orientation="vertical">
+
+        <!-- First CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/firstCardView"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="6dp"
+            app:cardBackgroundColor="#20000000"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/event"
+                android:layout_marginEnd="8dp"
+                app:tint="#FFFFFF"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Plan my Trip"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/firstCardView2"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="6dp"
+            app:cardBackgroundColor="#20000000"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/aq"
+                    android:layout_marginEnd="8dp"
+                    app:tint="#FFFFFF"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Explore Air Quality Index"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/halfCircularProgressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <!-- Rectangular Background 1 -->
+        <LinearLayout
+            android:id="@+id/backgroundRect1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/halfCircularProgressBar"
+            android:background="#20000000"
+
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/pollenCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:text="Pollen Count"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/actualPollenCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="Moderate"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+
+            <ImageView
+                android:id="@+id/AllergyImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/allergies" />
+
+
+
+        </LinearLayout>
+
+        <!-- Space between rectangles -->
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="1dp" />
+
+
+        <LinearLayout
+            android:id="@+id/backgroundRect2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/halfCircularProgressBar"
+            android:background="#20000000"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/RainTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:text="Precipitation"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/actualRainTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+
+            <ImageView
+                android:id="@+id/rainyImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/rainy" />
+
+
+        </LinearLayout>
+
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="1dp" />
+
+
+        <LinearLayout
+            android:id="@+id/backgroundRect3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/halfCircularProgressBar"
+            android:background="#20000000"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:text="Humidity"
+                android:textSize="20sp"
+
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/actualhumidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/humidityImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/humidityicon" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
