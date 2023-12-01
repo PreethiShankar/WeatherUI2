@@ -26,6 +26,11 @@
 
         <activity android:name=".ProfileActivity">
         </activity>
+        <activity android:name=".Calendar">
+        </activity>
+        <activity android:name=".Exploreaqi">
+        </activity>
+
 
     </application>
 
